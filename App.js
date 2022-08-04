@@ -16,7 +16,7 @@ export default function App() {
               resizeMode:"contain",
             }}
           />
-          <View style={styles.searchBar}>
+          {/* <View style={styles.searchBar}>
             <Image 
                 source={require('./assets/search.png')}
                 resizeMode="contain"
@@ -38,8 +38,8 @@ export default function App() {
               }}
               placeholder="Search ..."
             />
-          </View>
-          {/* <Image
+          </View> */}
+          <Image
               source={require('./assets/earth.png')}
               style = {{
                 width: 32,
@@ -48,7 +48,7 @@ export default function App() {
                 marginTop: 15,
                 marginRight: 20,
               }}
-            /> */}
+          /> 
         </View>
         <ScrollView style={styles.mainArea}>
 
