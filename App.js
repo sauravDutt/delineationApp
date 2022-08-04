@@ -1,5 +1,5 @@
-
-import { StyleSheet, StatusBar, SafeAreaView, Image, View, ScrollView, TextInput} from 'react-native';
+import { StyleSheet, View, Image, StatusBar, TextInput, ScrollView, Text, ImageBackground, SafeAreaView} from 'react-native';
+import { Motion } from "@legendapp/motion";
 
 export default function App() {
   return (
@@ -42,19 +42,60 @@ export default function App() {
           <Image
               source={require('./assets/earth.png')}
               style = {{
-                width: 32,
-                height: 32,
+                width: 42,
+                height: 42,
                 resizeMode: "contain",
-                marginTop: 15,
+                marginTop: 12,
                 marginRight: 20,
               }}
           /> 
         </View>
         <ScrollView style={styles.mainArea}>
+        <View style={styles.cardOuter}>
 
+        <Motion.Pressable style={styles.pressable}>
+          <Motion.View 
+            style={styles.card} 
+            whileTap={{scale: 0.7}}
+            transition = {{
+              type: 'spring',
+              damping: 20,
+              stiffness: 300,
+            }}
+          >
+            <Text style={styles.cardTitle}>Hello.</Text>
+          </Motion.View>
+        </Motion.Pressable>
+
+        <Motion.Pressable style={styles.pressable}>
+          <Motion.View 
+            style={styles.card} 
+            whileTap={{scale: 0.7}}
+            transition = {{
+              type: 'spring',
+              damping: 20,
+              stiffness: 300,
+            }}
+          >
+            <Text style={[styles.cardTitle, styles.textLeft]}>ART</Text>
+            <ImageBackground source={require('./assets/one.png')} resizeMode="cover" >
+            <Text style={styles.cardTitle}></Text>
+            <Text style={styles.cardTitle}></Text>
+            <Text style={styles.cardTitle}></Text>
+            <Text style={styles.cardTitle}></Text>
+            <Text style={styles.cardTitle}></Text>
+            <Text style={styles.cardTitle}></Text>
+            <Text style={styles.cardTitle}></Text>
+            <Text style={styles.cardTitle}></Text>
+            </ImageBackground>
+            <Text style={[styles.cardTitle, styles.textRight]}>Work.</Text>
+          </Motion.View>
+        </Motion.Pressable>
+
+        </View>
         </ScrollView>
+              
         <View style={styles.footer}>
-
         </View>
     </SafeAreaView>
   );
@@ -82,6 +123,44 @@ const styles = StyleSheet.create({
   },
   mainArea: {
     backgroundColor: 'rgba(0, 0, 0, 0.66)',
+  },
+  cardOuter: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  pressable: {
+    width: '50%',
+    height: 170,
+    justifyContent: 'center',
+  },
+  card: {
+    width: '90%',
+    height: 150,
+    marginLeft: '5%',
+    backgroundColor: '#4832a888',
+    justifyContent: 'center',
+    borderRadius: 7,
+    shadowColor: 'rgba(255, 255, 255, 0.683)',
+    shadowOffset: {width: 2, height: 2},
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  cardTitle: {
+    fontSize: 13,
+    color: '#fff',
+    textAlign: 'center',
+    fontWeight: '700',
+  },
+  textLeft:{
+    textAlign: 'left',
+    marginLeft: 5,
+  },
+  textRight:{
+    textAlign: 'right',
+    marginRight: 5,
+    marginTop: 5,
+    fontSize: 10,
   },
   footer: {
     height: 45,
