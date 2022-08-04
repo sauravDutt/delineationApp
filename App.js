@@ -33,7 +33,7 @@ export default function App() {
                 width: '50%',
                 marginRight: 100,
                 marginLeft: -30,
-                fontSize: '20px',
+                fontSize: 20,
                 backgroundColor: 'transparent',
               }}
               placeholder="Search ..."
