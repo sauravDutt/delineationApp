@@ -1,5 +1,7 @@
-import { StyleSheet, View, Image, StatusBar, TextInput, ScrollView, Text, ImageBackground, SafeAreaView} from 'react-native';
+import { StyleSheet, View, Image, StatusBar, ScrollView, Text, ImageBackground, SafeAreaView} from 'react-native';
 import { Motion } from "@legendapp/motion";
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faMugSaucer } from '@fortawesome/free-solid-svg-icons/faMugSaucer'
 
 export default function App() {
   return (
@@ -96,6 +98,7 @@ export default function App() {
         </ScrollView>
               
         <View style={styles.footer}>
+            <FontAwesomeIcon icon={ faMugSaucer } size={30} style={styles.footerIcons} />
         </View>
     </SafeAreaView>
   );
@@ -169,5 +172,8 @@ const styles = StyleSheet.create({
     borderRightWidth: 'none',
     borderLeftWidth: 'none',
     borderColor: 'rgba(255, 255, 255, 0.19)',
+  },
+  footerIcons: {
+    color: '#fff',
   }
 });
