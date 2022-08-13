@@ -1,1 +1,1 @@
-# This is A react Native application with all the bad practices \n Just a practice application 
+# This is A react Native application with all the bad practices. Just a practice application 
