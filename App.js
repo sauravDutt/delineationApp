@@ -15,7 +15,7 @@ export default function App() {
               height: 50,
               marginTop: 5,
               marginBottom: 10,
-              resizeMode:"contain",
+              resizeMode:"contain"
             }}
           />
           {/* <View style={styles.searchBar}>
