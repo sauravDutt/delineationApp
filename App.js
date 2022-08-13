@@ -1,7 +1,7 @@
 import { StyleSheet, View, Image, StatusBar, ScrollView, Text, ImageBackground, SafeAreaView} from 'react-native';
 import { Motion } from "@legendapp/motion";
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faMugSaucer } from '@fortawesome/free-solid-svg-icons/faMugSaucer'
+import { faWallet } from '@fortawesome/free-solid-svg-icons/faWallet';
 
 export default function App() {
   return (
@@ -18,29 +18,6 @@ export default function App() {
               resizeMode:"contain"
             }}
           />
-          {/* <View style={styles.searchBar}>
-            <Image 
-                source={require('./assets/search.png')}
-                resizeMode="contain"
-                style = {{
-                  width: 20, 
-                  height: 20,
-                  marginTop: 10,
-                  marginLeft: 20,
-                }}
-            />
-            <TextInput 
-              style={{
-                color:'#fff',
-                width: '50%',
-                marginRight: 100,
-                marginLeft: -30,
-                fontSize: 20,
-                backgroundColor: 'transparent',
-              }}
-              placeholder="Search ..."
-            />
-          </View> */}
           <Image
               source={require('./assets/earth.png')}
               style = {{
@@ -79,8 +56,8 @@ export default function App() {
               stiffness: 300,
             }}
           >
-            <Text style={[styles.cardTitle, styles.textLeft]}>ART</Text>
             <ImageBackground source={require('./assets/one.png')} resizeMode="cover" >
+            <Text style={[styles.cardTitle, styles.textLeft]}>ART</Text>
             <Text style={styles.cardTitle}></Text>
             <Text style={styles.cardTitle}></Text>
             <Text style={styles.cardTitle}></Text>
@@ -89,8 +66,9 @@ export default function App() {
             <Text style={styles.cardTitle}></Text>
             <Text style={styles.cardTitle}></Text>
             <Text style={styles.cardTitle}></Text>
-            </ImageBackground>
+            <Text style={styles.cardTitle}></Text>
             <Text style={[styles.cardTitle, styles.textRight]}>Work.</Text>
+            </ImageBackground>
           </Motion.View>
         </Motion.Pressable>
 
@@ -98,7 +76,7 @@ export default function App() {
         </ScrollView>
               
         <View style={styles.footer}>
-            <FontAwesomeIcon icon={ faMugSaucer } size={30} style={styles.footerIcons} />
+            <FontAwesomeIcon icon={ faWallet } size={20} style={styles.footerIcons} />
         </View>
     </SafeAreaView>
   );
@@ -143,10 +121,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4832a888',
     justifyContent: 'center',
     borderRadius: 7,
-    shadowColor: 'rgba(255, 255, 255, 0.683)',
-    shadowOffset: {width: 2, height: 2},
-    shadowOpacity: 0.2,
-    shadowRadius: 5,
+    
     elevation: 5,
   },
   cardTitle: {
@@ -157,16 +132,18 @@ const styles = StyleSheet.create({
   },
   textLeft:{
     textAlign: 'left',
+    color: "#4832a888",
     marginLeft: 5,
   },
   textRight:{
     textAlign: 'right',
+    color: "#4832a888",
     marginRight: 5,
     marginTop: 5,
     fontSize: 10,
   },
   footer: {
-    height: 45,
+    height: 42,
     borderWidth: 0.5,
     borderBottomWidth: 'none',
     borderRightWidth: 'none',
@@ -174,6 +151,8 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(255, 255, 255, 0.19)',
   },
   footerIcons: {
-    color: '#fff',
+    color: 'rgba(255, 255, 255, 0.835);',
+    marginLeft: 20,
+    marginTop: 15,
   }
 });
