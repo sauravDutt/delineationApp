@@ -30,7 +30,15 @@ export default function App() {
           /> 
         </View>
         <ScrollView style={styles.mainArea}>
-        <View style={styles.cardOuter}>
+        <ScrollView 
+          contentContainerStyle={{
+            paddingHorizontal: 15,
+            paddingTop: 10,
+            width: "100%",
+          }}
+          horizontal 
+          showsHorizontalScrollIndicator={false}
+          >
 
         <Motion.Pressable style={styles.pressable}>
           <Motion.View 
@@ -56,23 +64,39 @@ export default function App() {
               stiffness: 300,
             }}
           >
-            <ImageBackground source={require('./assets/one.png')} resizeMode="cover" >
-            <Text style={[styles.cardTitle, styles.textLeft]}>ART</Text>
-            <Text style={styles.cardTitle}></Text>
-            <Text style={styles.cardTitle}></Text>
-            <Text style={styles.cardTitle}></Text>
-            <Text style={styles.cardTitle}></Text>
-            <Text style={styles.cardTitle}></Text>
-            <Text style={styles.cardTitle}></Text>
-            <Text style={styles.cardTitle}></Text>
-            <Text style={styles.cardTitle}></Text>
-            <Text style={styles.cardTitle}></Text>
-            <Text style={[styles.cardTitle, styles.textRight]}>Work.</Text>
-            </ImageBackground>
+            <Text style={styles.cardTitle}>Hello.</Text>
           </Motion.View>
         </Motion.Pressable>
 
-        </View>
+        <Motion.Pressable style={styles.pressable}>
+          <Motion.View 
+            style={styles.card} 
+            whileTap={{scale: 0.7}}
+            transition = {{
+              type: 'spring',
+              damping: 20,
+              stiffness: 300,
+            }}
+          >
+            <Text style={styles.cardTitle}>Hello.</Text>
+          </Motion.View>
+        </Motion.Pressable>
+
+        <Motion.Pressable style={styles.pressable}>
+          <Motion.View 
+            style={styles.card} 
+            whileTap={{scale: 0.7}}
+            transition = {{
+              type: 'spring',
+              damping: 20,
+              stiffness: 300,
+            }}
+          >
+            <Text style={styles.cardTitle}>Hello.</Text>
+          </Motion.View>
+        </Motion.Pressable>
+
+        </ScrollView>
         </ScrollView>
               
         <View style={styles.footer}>
