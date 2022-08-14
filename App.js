@@ -2,6 +2,7 @@ import { StyleSheet, View, Image, StatusBar, ScrollView, Text, ImageBackground, 
 import { Motion } from "@legendapp/motion";
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faWallet } from '@fortawesome/free-solid-svg-icons/faWallet';
+import { faCamera } from '@fortawesome/free-solid-svg-icons/faCamera';
 
 export default function App() {
   return (
@@ -29,7 +30,7 @@ export default function App() {
               }}
           /> 
         </View>
-        <ScrollView style={styles.mainArea}>
+      <ScrollView style={styles.mainArea}>
         <ScrollView 
           contentContainerStyle={{
             paddingHorizontal: 15,
@@ -40,67 +41,57 @@ export default function App() {
           showsHorizontalScrollIndicator={false}
           >
 
-        <Motion.Pressable style={styles.pressable}>
-          <Motion.View 
-            style={styles.card} 
-            whileTap={{scale: 0.7}}
-            transition = {{
-              type: 'spring',
-              damping: 20,
-              stiffness: 300,
-            }}
-          >
-            <Text style={styles.cardTitle}>Hello.</Text>
-          </Motion.View>
-        </Motion.Pressable>
+            <Motion.Pressable style={styles.pressable}>
+              <Motion.View 
+                style={styles.card} 
+                whileTap={{scale: 0.7}}
+                transition = {{
+                  type: 'spring',
+                  damping: 20,
+                  stiffness: 300,
+                }}
+              >
+                <Text style={styles.cardTitle}>Hello One.</Text>
+              </Motion.View>
+            </Motion.Pressable>
 
-        <Motion.Pressable style={styles.pressable}>
-          <Motion.View 
-            style={styles.card} 
-            whileTap={{scale: 0.7}}
-            transition = {{
-              type: 'spring',
-              damping: 20,
-              stiffness: 300,
-            }}
-          >
-            <Text style={styles.cardTitle}>Hello.</Text>
-          </Motion.View>
-        </Motion.Pressable>
+            <Motion.Pressable style={styles.pressable}>
+              <Motion.View 
+                style={styles.card} 
+                whileTap={{scale: 0.7}}
+                transition = {{
+                  type: 'spring',
+                  damping: 20,
+                  stiffness: 300,
+                }}
+              >
+                <Text style={styles.cardTitle}>Hello Two.</Text>
+              </Motion.View>
+            </Motion.Pressable>
 
-        <Motion.Pressable style={styles.pressable}>
-          <Motion.View 
-            style={styles.card} 
-            whileTap={{scale: 0.7}}
-            transition = {{
-              type: 'spring',
-              damping: 20,
-              stiffness: 300,
-            }}
-          >
-            <Text style={styles.cardTitle}>Hello.</Text>
-          </Motion.View>
-        </Motion.Pressable>
-
-        <Motion.Pressable style={styles.pressable}>
-          <Motion.View 
-            style={styles.card} 
-            whileTap={{scale: 0.7}}
-            transition = {{
-              type: 'spring',
-              damping: 20,
-              stiffness: 300,
-            }}
-          >
-            <Text style={styles.cardTitle}>Hello.</Text>
-          </Motion.View>
-        </Motion.Pressable>
-
+            <Motion.Pressable style={styles.pressable}>
+              <Motion.View 
+                style={styles.card} 
+                whileTap={{scale: 0.7}}
+                transition = {{
+                  type: 'spring',
+                  damping: 20,
+                  stiffness: 300,
+                }}
+              >
+                <Text style={styles.cardTitle}>Hello Three.</Text>
+              </Motion.View>
+            </Motion.Pressable>
         </ScrollView>
-        </ScrollView>
+      </ScrollView>
               
         <View style={styles.footer}>
+          <View style={styles.footerIconOuter}>
             <FontAwesomeIcon icon={ faWallet } size={20} style={styles.footerIcons} />
+          </View>
+          <View style={styles.footerIconOuter}>
+            <FontAwesomeIcon icon={ faCamera } size={20} style={styles.footerIcons} />
+          </View>
         </View>
     </SafeAreaView>
   );
@@ -163,6 +154,7 @@ const styles = StyleSheet.create({
     fontSize: 10,
   },
   footer: {
+    flexDirection: 'row',
     height: 42,
     borderWidth: 0.5,
     borderBottomWidth: 'none',
@@ -170,9 +162,20 @@ const styles = StyleSheet.create({
     borderLeftWidth: 'none',
     borderColor: 'rgba(255, 255, 255, 0.19)',
   },
+  footerIconOuter: {
+    borderRadius: 50,
+    borderColor: 'rgba(255, 255, 255, 0.09)',
+    borderWidth: 0.5,
+    marginTop: 10,
+    marginLeft: 10,
+    width: 40,
+    textAlign: 'center',
+    height: 40,
+    justifyContent: 'center',
+  },
   footerIcons: {
     color: 'rgba(255, 255, 255, 0.835);',
-    marginLeft: 20,
-    marginTop: 15,
+    marginLeft: 9,
   }
 });
+ 
