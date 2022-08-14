@@ -33,7 +33,7 @@ export default function App() {
         <ScrollView 
           contentContainerStyle={{
             paddingHorizontal: 15,
-            paddingTop: 10,
+            paddingTop: 0,
             width: "100%",
           }}
           horizontal 
@@ -129,23 +129,19 @@ const styles = StyleSheet.create({
   mainArea: {
     backgroundColor: 'rgba(0, 0, 0, 0.66)',
   },
-  cardOuter: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
   pressable: {
     width: '50%',
     height: 170,
     justifyContent: 'center',
   },
   card: {
-    width: '90%',
+    width: 160,
     height: 150,
-    marginLeft: '5%',
+    marginLeft: '2%',
+    marginRight: '2%',
     backgroundColor: '#4832a888',
     justifyContent: 'center',
     borderRadius: 7,
-    
     elevation: 5,
   },
   cardTitle: {
